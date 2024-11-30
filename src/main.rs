@@ -4,7 +4,7 @@ use names::Generator;
 fn update_commit_push(){
     let add_command = Command::new("git")
         .arg("add")
-        .arg("-A")
+        .arg(".")
         .output()
         .expect("Failed to execute git command");
     if !add_command.status.success(){
